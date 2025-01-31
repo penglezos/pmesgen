@@ -47,6 +47,15 @@
             box-sizing: border-box;
         }
 
+
+        .fieldbutton {
+            background-color: #0e990e;
+        }
+
+        .fieldbutton:hover {
+            background-color: #017a01;
+        }
+
         button {
             display: block;
             width: 100%;
@@ -56,7 +65,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            margin-top: 50px;
+            margin-top: 20px;
             text-align: center;
         }
 
@@ -78,61 +87,77 @@
         <script> document.write(new Date().toDateString());</script>
     </p>
 
-    <div class="form-group">
-        <label contenteditable="true">Password manager URL</label>
-        <input type="text">
+    <div id="form-container">
+        <div class="form-group">
+            <label contenteditable="true">Password manager URL</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Email address</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Master password</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Two-step login recovery code</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Email password</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Email recovery code (2FA)</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Phone number</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Phone PIN</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Computer password</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">USB encryption key</label>
+            <input type="text">
+        </div>
+
+        <div class="form-group">
+            <label contenteditable="true">Vault export password</label>
+            <input type="text">
+        </div>
     </div>
 
-    <div class="form-group">
-        <label contenteditable="true">Email address</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Master password</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Two-step login recovery code</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Email password</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Email recovery code (2FA)</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Phone number</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Phone PIN</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Computer password</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">USB encryption key</label>
-        <input type="text">
-    </div>
-
-    <div class="form-group">
-        <label contenteditable="true">Vault export password</label>
-        <input type="text">
-    </div>
-
+    <button class="fieldbutton noprint" onclick="addNewField()">Add New Field</button>
     <button class="noprint" onclick="window.print()">Print This Page</button>
+
+    <script>
+        function addNewField() {
+            const container = document.getElementById('form-container');
+            const div = document.createElement('div');
+            div.classList.add('form-group');
+            div.innerHTML = `
+                <label contenteditable="true">New Field</label>
+                <input type="text">
+            `;
+            container.appendChild(div);
+        }
+    </script>
 </body>
 </html>
