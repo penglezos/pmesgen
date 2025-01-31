@@ -3,11 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Manager Emergency Sheet Generator</title>
+    <title>Password Manager Emergency Sheet</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .updated-on {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            flex: 1;
+            min-width: 200px;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 2;
+            border: 2px solid #5c5c5c;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        @media print {
+            .noprint {
+                display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <h1>Password Manager Emergency Sheet</h1>
 
+    <p class="updated-on"><b>Updated On:</b>
+        <script> document.write(new Date().toDateString());</script>
+    </p>
+
+    <div class="form-group">
+        <label>Password manager URL</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Email address</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Master password</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Two-step login recovery code</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Email password</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Email recovery code (2FA)</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Phone number</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Phone PIN</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Computer password</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>USB encryption key</label>
+        <input type="text">
+    </div>
+
+    <div class="form-group">
+        <label>Vault export password</label>
+        <input type="text">
+    </div>
+    <button class="noprint" onclick="window.print()">Print This Page</button>
 </body>
-
 </html>
