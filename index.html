@@ -103,74 +103,72 @@
 <body>
     <h1>Password Manager Emergency Sheet</h1>
 
-    <p class="updated-on"><b>Updated On:</b>
-        <script> document.write(new Date().toDateString());</script>
-    </p>
+    <p class="updated-on"><b>Updated On:</b> <span id="date"></span></p>
 
     <div id="form-container">
         <div class="form-group">
             <label contenteditable="true">Password manager URL</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email address</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Master password</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Two-step login recovery code</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email password</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email recovery code (2FA)</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Phone number</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Phone PIN</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Computer password</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">USB encryption key</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Vault export password</label>
-            <input type="text">
+            <input type="text" value="">
             <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
     </div>
@@ -178,6 +176,7 @@
     <p class="noprint">Note: You can edit text labels by clicking them.</p>
     <button class="fieldbutton noprint" onclick="addNewField()">Add New Field</button>
     <button class="noprint" onclick="window.print()">Print This Page</button>
+    <button class="noprint" onclick="saveToHTML()">Save locally</button>
 
     <script>
         function addNewField() {
@@ -186,7 +185,7 @@
             div.classList.add('form-group');
             div.innerHTML = `
                 <label contenteditable="true">New Field</label>
-                <input type="text">
+                <input type="text" value="">
                 <button class="remove-button noprint" onclick="removeField(this)">X</button>
             `;
             container.appendChild(div);
@@ -195,6 +194,21 @@
         function removeField(button) {
             button.parentElement.remove();
         }
+
+        function saveToHTML() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.setAttribute('value', input.value);
+            });
+
+            const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'password_manager_emergency_sheet.html';
+            link.click();
+        }
+
+        document.getElementById('date').innerText = new Date().toDateString();
     </script>
 </body>
 </html>
