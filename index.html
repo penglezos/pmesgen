@@ -47,6 +47,27 @@
             box-sizing: border-box;
         }
 
+        .remove-button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 1px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .remove-button:hover {
+            background-color: #b02a37;
+        }
 
         .fieldbutton {
             background-color: #0e990e;
@@ -91,56 +112,67 @@
         <div class="form-group">
             <label contenteditable="true">Password manager URL</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email address</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Master password</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Two-step login recovery code</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email password</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Email recovery code (2FA)</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Phone number</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Phone PIN</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Computer password</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">USB encryption key</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
 
         <div class="form-group">
             <label contenteditable="true">Vault export password</label>
             <input type="text">
+            <button class="remove-button noprint" onclick="removeField(this)">X</button>
         </div>
     </div>
 
@@ -155,8 +187,13 @@
             div.innerHTML = `
                 <label contenteditable="true">New Field</label>
                 <input type="text">
+                <button class="remove-button noprint" onclick="removeField(this)">X</button>
             `;
             container.appendChild(div);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
         }
     </script>
 </body>
