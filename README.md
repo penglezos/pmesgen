@@ -32,6 +32,10 @@ Password Manager Emergency Sheet Generator (pmesgen) provides a simple way to ma
 7. Fill in the fields with your information.
 8. Store printed copy securely in a locked safe or other secure location.
 
+## Acknowledgments
+
+Huge thanks to 'u/djasonpenney' from `r/Bitwarden` for sharing his resources regarding the emergency kit. Check out his awesome [Github repository](https://github.com/djasonpenney/bitwarden_reddit) to learn more cool stuff about password managers!
+
 ## Contribute
 
 If you would like to contribute feel free to submit your pull request with your changes.
