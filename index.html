@@ -50,17 +50,25 @@
         button {
             padding: 12px;
             font-size: 16px;
-            background: #007bff;
-            color: white;
             border: none;
             cursor: pointer;
-            margin: 10px 0;
+            margin: 10px 5px;
             text-align: center;
             display: inline-block;
+            border-radius: 5px;
         }
 
         button:hover {
-            background: #0056b3;
+            opacity: 0.9;
+        }
+
+        .field-button {
+            background-color: #0e990e;
+            color: white;
+        }
+
+        .field-button:hover {
+            background-color: #017a01;
         }
 
         .remove-button {
@@ -74,21 +82,28 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            margin-left: 10px;
         }
 
         .remove-button:hover {
             background-color: #b02a37;
         }
 
-        .fieldbutton {
-            background-color: #0e990e;
+        .save-button {
+            background-color: #007bff;
+            color: white;
         }
 
-        .fieldbutton:hover {
-            background-color: #017a01;
+        .save-button:hover {
+            background-color: #0056b3;
+        }
+
+        .print-button {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .print-button:hover {
+            background-color: #43484d;
         }
 
         @media print {
@@ -172,9 +187,9 @@
     </div>
 
     <p class="noprint">Note: You can edit text labels by clicking them.</p>
-    <button class="fieldbutton noprint" onclick="addNewField()">Add new field</button>
-    <button class="noprint" onclick="saveToHTML()">Save template</button>
-    <button class="noprint" onclick="window.print()">Print template</button>
+    <button class="field-button noprint" onclick="addNewField()">Add new field</button>
+    <button class="save-button noprint" onclick="saveToHTML()">Save template</button>
+    <button class="print-button noprint" onclick="window.print()">Print template</button>
 
     <script>
         function addNewField() {
