@@ -47,6 +47,13 @@
             box-sizing: border-box;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
         button {
             padding: 12px;
             font-size: 16px;
@@ -187,9 +194,12 @@
     </div>
 
     <p class="noprint">Note: You can edit text labels by clicking them.</p>
-    <button class="field-button noprint" onclick="addNewField()">Add new field</button>
-    <button class="save-button noprint" onclick="saveToHTML()">Save template</button>
-    <button class="print-button noprint" onclick="window.print()">Print template</button>
+
+    <div class="button-container noprint">
+        <button class="field-button" onclick="addNewField()">Add new field</button>
+        <button class="save-button" onclick="saveToHTML()">Save template</button>
+        <button class="print-button" onclick="window.print()">Print template</button>
+    </div>
 
     <script>
         function addNewField() {
