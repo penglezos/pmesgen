@@ -4,7 +4,7 @@ Password Manager Emergency Sheet Generator (pmesgen) provides a simple way to ma
 
 ## Features
 
-- No installation is required.
+- No installation required.
 - Simple and user-friendly interface.
 - Ready to use sheet template.
 - Automatically updates the date generated.
@@ -34,7 +34,7 @@ Password Manager Emergency Sheet Generator (pmesgen) provides a simple way to ma
 
 ## Acknowledgments
 
-Huge thanks to 'u/djasonpenney' from `r/Bitwarden` for sharing his resources regarding the emergency kit. Check out his awesome [Github repository](https://github.com/djasonpenney/bitwarden_reddit) to learn more cool stuff about password managers!
+A huge thanks to 'u/djasonpenney' from `r/Bitwarden` for sharing his resources regarding the emergency kit. Check out his awesome [Github repository](https://github.com/djasonpenney/bitwarden_reddit) to learn more cool stuff about password managers!
 
 ## Contribute
 
