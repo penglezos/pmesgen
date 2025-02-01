@@ -18,17 +18,19 @@ Password Manager Emergency Sheet Generator (pmesgen) provides a simple way to ma
 
 1. Open the website [https://penglezos.github.io/pmesgen](https://penglezos.github.io/pmesgen) in your browser.
 
-    Alternatively clone the repository:
-    ```
-    git clone https://github.com/penglezos/pmesgen.git
-    ```
-2. Customize the existing text labels by clicking on them. 
+   Alternatively clone the repository:
+
+   ```
+   git clone https://github.com/penglezos/pmesgen.git
+   ```
+
+2. Customize the existing text labels by clicking on them.
 3. Click on "Add new field" button to include custom entries if needed.
 4. Click on "X" button to remove any fields you don't need.
 5. Click on "Save sheet as template" if you want to download an HTML copy of your sheet for future use.
 6. Click "Print sheet" to print your sheet.
 7. Fill in the fields with your information.
-8. Store printed copy securely  in a locked safe or other secure location.
+8. Store printed copy securely in a locked safe or other secure location.
 
 ## Contribute
 
