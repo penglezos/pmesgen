@@ -118,6 +118,12 @@
                 display: none;
             }
         }
+
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -193,13 +199,15 @@
         </div>
     </div>
 
-    <p class="noprint">Information and source code are available on <a href="https://github.com/penglezos/pmesgen" target="_blank">Github</a></p>
-
     <div class="button-container noprint">
         <button class="field-button" onclick="addNewField()">Add new field</button>
         <button class="save-button" onclick="saveToHTML()">Save sheet as template</button>
         <button class="print-button" onclick="window.print()">Print sheet</button>
     </div>
+
+    <footer class="noprint">
+        <p>Version: 1.0.0 (February 2, 2025) - <a href="https://github.com/penglezos/pmesgen/" target="_blank">Source code</a></p>
+    </footer>
 
     <script>
         function addNewField() {
